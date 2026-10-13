@@ -1,0 +1,15 @@
+M1: hapus diskon
+    gagal: test_member_gets_ten_percent_discount[1000-900]
+    gagal: test_member_gets_ten_percent_discount[2000-1800]
+    gagal: test_member_gets_ten_percent_discount[1-0.9]
+    gagal: test_member_total_is_discounted_then_taxed
+
+M2: pajak 0.11 -> 0.10
+    gagal: test_tax_adds_eleven_percent
+    gagal: test_member_total_is_discounted_then_taxed
+    gagal: test_non_member_total_is_taxed_only
+
+M3: hapus validasi kuantitas
+    gagal: test_subtotal_rejects_non_positive_quantity[0]
+    gagal: test_subtotal_rejects_non_positive_quantity[-1]
+

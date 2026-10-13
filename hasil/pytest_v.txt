@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0 -- /opt/homebrew/opt/python@3.14/bin/python3.14
+cachedir: .pytest_cache
+rootdir: /Users/awal/Downloads/sdf_sesi10 2
+configfile: pytest.ini
+testpaths: tests
+collecting ... collected 19 items
+
+tests/test_pricing.py::test_subtotal_is_price_times_quantity[1000-1-1000] PASSED [  5%]
+tests/test_pricing.py::test_subtotal_is_price_times_quantity[1500-3-4500] PASSED [ 10%]
+tests/test_pricing.py::test_subtotal_is_price_times_quantity[250-4-1000] PASSED [ 15%]
+tests/test_pricing.py::test_subtotal_is_price_times_quantity[0-5-0] PASSED [ 21%]
+tests/test_pricing.py::test_subtotal_rejects_negative_price PASSED       [ 26%]
+tests/test_pricing.py::test_subtotal_rejects_non_positive_quantity[0] PASSED [ 31%]
+tests/test_pricing.py::test_subtotal_rejects_non_positive_quantity[-1] PASSED [ 36%]
+tests/test_pricing.py::test_member_gets_ten_percent_discount[1000-900] PASSED [ 42%]
+tests/test_pricing.py::test_member_gets_ten_percent_discount[2000-1800] PASSED [ 47%]
+tests/test_pricing.py::test_member_gets_ten_percent_discount[1-0.9] PASSED [ 52%]
+tests/test_pricing.py::test_non_member_pays_full_subtotal PASSED         [ 57%]
+tests/test_pricing.py::test_tax_adds_eleven_percent PASSED               [ 63%]
+tests/test_pricing.py::test_member_total_is_discounted_then_taxed PASSED [ 68%]
+tests/test_pricing.py::test_non_member_total_is_taxed_only PASSED        [ 73%]
+tests/test_pricing.py::test_total_raises_on_invalid_input PASSED         [ 78%]
+tests/test_pricing.py::test_receipt_lines_end_with_newline PASSED        [ 84%]
+tests/test_pricing.py::test_empty_receipt_writes_single_newline PASSED   [ 89%]
+tests/test_pricing.py::test_receipt_overwrites_existing_file PASSED      [ 94%]
+tests/test_pricing.py::test_receipt_keeps_utf8_characters PASSED         [100%]
+
+============================== 19 passed in 0.03s ==============================
